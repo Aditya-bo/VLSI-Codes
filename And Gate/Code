@@ -1,1 +1,24 @@
-xjduccucj
+// Data flow modelling
+
+module and_gate(a,b,y);
+input a,b:
+outpur y;
+assign y=a&b;
+endmodule
+
+// Gate level modelling or Structural Modelling
+
+module and_gate(a,b,y)
+input a,b;
+output y;
+and A(y,a,b);
+endmodule
+
+// Behavioural Modelling
+
+module and_gate(a,b,y);
+input a,b:
+output y;
+always @(*)
+y=a&b;
+endmodule
