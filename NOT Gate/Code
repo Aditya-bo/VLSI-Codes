@@ -1,0 +1,40 @@
+// Data Flow Modelling
+
+module not_gate(a,b);
+input a;
+output b;
+assign b=~a;
+endmodule
+
+//Gate Level Modelling
+
+module not_gate(a,b);
+input a;
+ouput b;
+not A(b,a);
+endmodule
+
+// Behaviuoral Modelling
+
+module not_gate(a,b);
+input a;
+output b;
+always @(*)
+b= ~a;
+endmodule
+
+or 
+
+module not_gate(a,b);
+input a;
+output b;
+always @ (a) begin
+if (a=1) begin
+b=0;
+end
+else
+b=1;
+end
+endmodule
+
+
