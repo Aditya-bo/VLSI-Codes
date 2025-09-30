@@ -1,1 +1,35 @@
+// Data flow modelling
+
+module xor_gate(y,a,b);
+input a,b;
+output y;
+assign y = a^b;
+endmodule
+
+// gate level modelling
+
+module xor_gate(y,a,b);
+input (a,b);
+output y;
+xor A(y,a,b);
+endmodule
+
+//Behavioural modelling 
+
+module xor_gate(a,b,y);
+input (a,b);
+output y;
+always @(*) begin
+if (a=0 & b=0) begin
+y=0;
+end
+if (a=1 & b=1) begin
+y=0; 
+end
+else 
+y=1;
+end
+endmodule
+
+
 
