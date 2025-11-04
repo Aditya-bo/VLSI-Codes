@@ -1,8 +1,8 @@
 //Data flow modelling
 
-module FA( a,b,c,sum,carry);
-input a,b,c;
+module full_adder( a,b,cin,sum,carry);
+input a,b,cin;
 output sum, carry;
-assign sum=a^b^c;
-assign carry= a&b|b&c|a&c;
+assign sum=a^b^cin;
+assign carry= a&b|b&cin|a&cin;
 endmodule
